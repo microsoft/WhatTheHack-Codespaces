@@ -1,0 +1,19 @@
+name: Daily Pull
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write  # Grants write access to the repository contents
+  pull-requests: write
+  
+jobs:
+  pull_folders:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Run pull_folders.ps1 script
+        run: pwsh .github/scripts/pull_folders.ps1
