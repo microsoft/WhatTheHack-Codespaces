@@ -16,4 +16,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run pull_folders.ps1 script
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: pwsh .github/scripts/pull_folders.ps1
