@@ -1,0 +1,35 @@
+{
+    "name" : "IntroToAzureAI",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "workspaceFolder": "/workspaces/WhatTheHack/015-Serverless/Student",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils": {},
+        "ghcr.io/devcontainers/features/azure-cli": {},
+        "ghcr.io/devcontainers/features/dotnet:2": "6.0",
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    "hostRequirements": {
+      "cpus": 1
+    },
+    "waitFor": "onCreateCommand",
+    "postAttachCommand": "/bin/bash /workspaces/WhatTheHack/.devcontainer/check-repo.sh",
+    "updateContentCommand":"",
+    "postCreateCommand": "",
+    "customizations": {
+      "codespaces": {
+        "openFiles": []
+      },
+      "vscode": {
+        "extensions": [
+          "ms-dotnettools.vscode-dotnet-runtime",
+          "ms-dotnettools.csdevkit",
+          "ms-dotnettools.csharp",
+          "ms-azuretools.vscode-azurefunctions",
+          "ms-vscode.vscode-typescript-next",
+          "ms-vscode.azure-account",
+          "ms-azuretools.vscode-azureresourcegroups",
+          "gruntfuggly.todo-tree"
+        ]
+      }
+    }
+  }
