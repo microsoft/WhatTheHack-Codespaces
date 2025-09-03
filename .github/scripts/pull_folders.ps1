@@ -1,7 +1,7 @@
 # PowerShell script to pull only the student and resources folders from the hacks containing a devcontainer file
 
 # Define the repository URL
-$repoUrl = "https://github.com/Whowong/WhatTheHack"
+$repoUrl = "https://github.com/Microsoft/WhatTheHack"
 
 # Create a new branch for the changes
 try {
@@ -156,3 +156,4 @@ try {
     Write-Error "Error creating pull request: $_"
     exit 1
 }
+
